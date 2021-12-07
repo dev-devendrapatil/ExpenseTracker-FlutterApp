@@ -21,10 +21,11 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter App'),
-        ),
-        body: Column(
+      appBar: AppBar(
+        title: Text('Flutter App'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
@@ -36,6 +37,8 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
               UserTransactions(),
-            ]));
+            ]),
+      ),
+    );
   }
 }
